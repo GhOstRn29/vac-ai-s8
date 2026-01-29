@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Amisha!</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Great+Vibes&family=Quicksand:wght@300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Music Audio (Hidden) -->
+    <audio id="bg-music" loop>
+        <!-- User needs to add music.mp3 to assets/ -->
+        <source src="assets/music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Player Controls -->
+    <div id="music-player" class="music-player">
+        <span id="song-name" class="song-name">No Music</span>
+        <button id="music-btn" class="music-btn" aria-label="Toggle Music">🔈</button>
+    </div>
+
+    <!-- Side Characters (Click to Play) -->
+    <img src="assets/cindrella.jpg" alt="Cinderella" id="cinderella" class="character-side" data-song-index="0"
+        title="Play - I See the Light">
+    <img src="assets/elsa.jpg" alt="Elsa" id="elsa" class="character-side" data-song-index="1" title="Play - Let it go">
+    <img src="assets/Anna.jpg" alt="Anna" id="anna" class="character-side" data-song-index="2"
+        title="Play - Do You Want to Build a Snowman?">
+    <img src="assets/moana.jpg" alt="Moana" id="moana" class="character-side" data-song-index="3"
+        title="Play - How far I'll go">
+
+    <!-- Hero / Intro Section -->
+    <section id="hero" class="scene">
+        <div class="hero-content">
+            <h1 class="fade-in-slow">Once upon a time...</h1>
+            <p class="subtitle fade-in-delay">A magical story began.</p>
+            <button id="enter-btn" class="magical-btn">Open the Book</button>
+        </div>
+        <div class="sparkles"></div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="scene hidden-scene">
+        <div class="story-container">
+            <div class="story-card transition-card">
+                <h2>The Princess</h2>
+                <div class="img-placeholder">
+                    <img src="assets/princess.jpg" alt="Princess Amisha">
+                </div>
+                <p>In a world full of ordinary people, there was one who shone brighter than the stars. Lorem ipsum
+                    dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
+                    placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
+                    Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia
+                    integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
+                    conubia nostra inceptos himenaeos.
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+                    pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed
+                    diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl
+                    malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad
+                    litora torquent per conubia nostra inceptos himenaeos.</p>
+            </div>
+            <div class="story-card transition-card" style="margin-top: 50px;">
+                <h2>Her Magic</h2>
+                <p>With a smile that could light up the darkest night and a heart of pure gold. Lorem ipsum dolor sit
+                    amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id
+                    cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus
+                    fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc
+                    posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra
+                    inceptos himenaeos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Birthday Wish Section -->
+    <section id="wish" class="scene hidden-scene">
+        <h1 class="birthday-title main-wish">Happy Birthday<br>Amisha!</h1>
+        <div class="confetti-container"></div>
+    </section>
+
+    <!-- Write-up & Poem Section -->
+    <section id="message" class="scene">
+        <div class="paper-scroll transition-card">
+            <h2>A Special Poem</h2>
+            <div class="poem-content">
+                <p>
+                    Happy Birthday, Amisha<br><br>
+
+                    Another year, another reason to smile,<br>
+                    We're grateful for you—today and all the while.<br>
+                    Through every laugh and every bend,<br>
+                    We're lucky to have you as our friend.<br><br>
+
+                    May your day be bright, your dreams come true,<br>
+                    Happiness today and the whole year through.<br>
+                    Happy Birthday!
+                </p>
+
+                <br>
+                <p>To our dearest friend, may this year bring you all the joy and magic you deserve. Keep shining!</p>
+            </div>
+        </div>
+
+        <div class="paper-scroll transition-card" style="margin-top: 50px;">
+            <h2>The Path to the Mystic Horizon</h2>
+            <div class="poem-content">
+                <p>
+                    We chose to chase the light<br>
+                    Something that lived beyond our sight<br>
+                    With bated breath, as we march along<br>
+                    In search of a horizon we belong<br>
+                    As we reach a pinnacle of a mountain<br>
+                    Impugned by a lake which was certain<br>
+                    With a zeal, yet grounded with pragmatism<br>
+                    Mind and heart both present in the prism<br>
+                    The leap could not bend our enthusiasm<br>
+                    Together, hand in hand, we spanned the chasm<br>
+                    Next we reach the land of mystic sand<br>
+                    Galvanized by the scorching sun,<br>
+                    As we almost reach the last run<br>
+                    Mountains resembled the stage<br>
+                    And the Auroras started to amaze<br>
+                    A victorious emancipation set to glaze.<br><br>
+
+                    A journey destined for a certain victory,<br>
+                    For now it tests the strength of your intensity.<br>
+                    Let’s pledge to keep chasing the dream,<br>
+                    The way we chased light in that magical realm.<br><br>
+
+                    Happy Birthday Amisha!<br>
+                    Have a focused mind and heart always clear<br>
+                    Keep the virtue strong,<br>
+                    Be jocund and victorious year on year.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="scene">
+        <h2>Memories</h2>
+        <div class="gallery-grid">
+            <div class="frame transition-card">
+                <div class="img-placeholder"><img src="assets/photo1.jpeg"></div>
+            </div>
+            <div class="frame transition-card">
+                <div class="img-placeholder"><img src="assets/photo2.jpeg"></div>
+            </div>
+            <div class="frame transition-card">
+                <div class="img-placeholder"><img src="assets/photo3.jpeg"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with ✨ magic for Amisha</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
