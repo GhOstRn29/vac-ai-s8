@@ -1,0 +1,351 @@
+:root {
+    --primary-color: #4a0e4e;
+    /* Royal Deep Purple */
+    --secondary-color: #811331;
+    /* Deep Rose */
+    --accent-gold: #ffd700;
+    --text-color: #fff;
+    --font-heading: 'Great Vibes', cursive;
+    --font-subheading: 'Cinzel', serif;
+    --font-body: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2b0036 0%, #1a0b2e 50%, #000000 100%);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+h1,
+h2 {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    margin: 0;
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    opacity: 0;
+    /* Hidden initially for transition effect */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-out;
+    transform: translateY(20px);
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    background: radial-gradient(circle at center, transparent 0%, #000 100%);
+    opacity: 1;
+    /* Hero always visible initially */
+    transform: translateY(0);
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-family: var(--font-subheading);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.magical-btn {
+    background: transparent;
+    border: 2px solid var(--accent-gold);
+    color: var(--accent-gold);
+    padding: 1rem 2rem;
+    font-family: var(--font-subheading);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 3rem;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.magical-btn:hover {
+    background: var(--accent-gold);
+    color: #000;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+    transform: scale(1.05);
+}
+
+/* Story Cards */
+.story-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.story-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s ease;
+}
+
+.story-card.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Wish Section */
+.birthday-title {
+    font-size: 6rem;
+    text-align: center;
+    animation: glow-pulse 3s infinite alternate;
+}
+
+/* Write-up (Scroll/Paper look) */
+.paper-scroll {
+    background: #fdfbf7;
+    color: #333;
+    padding: 4rem;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transform: rotate(-1deg);
+}
+
+.paper-scroll h2 {
+    color: #811331;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.poem-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.frame {
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    /* Limit width but allow height to adjust */
+    background: rgba(255, 255, 255, 0.1);
+    border: 5px solid var(--accent-gold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.5s;
+    padding: 5px;
+    /* Add small padding for a matting effect */
+}
+
+.frame:hover {
+    transform: scale(1.05) rotate(2deg);
+    z-index: 10;
+}
+
+.img-placeholder {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-placeholder img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    /* Ensure full image is visible */
+}
+
+/* Utility / Music */
+/* Utility / Music */
+.music-player {
+    position: fixed;
+    top: 20px;
+    left: 150px;
+    /* Positioned to not overlap with Cinderella */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: 1px solid var(--accent-gold);
+}
+
+.song-name {
+    font-family: var(--font-subheading);
+    font-size: 0.9rem;
+    color: var(--accent-gold);
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.music-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Simple Animations */
+.fade-in-slow {
+    animation: fadeIn 3s ease-out forwards;
+}
+
+.fade-in-delay {
+    opacity: 0;
+    animation: fadeIn 3s ease-out 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes glow-pulse {
+    from {
+        text-shadow: 0 0 10px var(--accent-gold);
+    }
+
+    to {
+        text-shadow: 0 0 30px var(--accent-gold), 0 0 50px #ff00ff;
+    }
+}
+
+/* Sparkles */
+.sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image:
+        radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 2px),
+        radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 3px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    animation: sparkle-anim 20s linear infinite;
+    opacity: 0.5;
+}
+
+/* Side Characters */
+.character-side {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--accent-gold);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    z-index: 50;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+}
+
+.character-side:hover {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 1;
+    cursor: pointer;
+}
+
+#elsa {
+    bottom: 20px;
+    left: 20px;
+}
+
+#anna {
+    bottom: 20px;
+    right: 20px;
+}
+
+#moana {
+    top: 100px;
+    /* Below music button */
+    right: 20px;
+}
+
+#cinderella {
+    top: 20px;
+    left: 20px;
+    object-position: top center;
+    /* Ensure face is visible */
+}
+
+/* Reduce size on smaller screens so they don't block text */
+@media (max-width: 768px) {
+    .character-side {
+        width: 80px;
+        height: 80px;
+        opacity: 0.7;
+    }
+
+    #moana {
+        top: 80px;
+    }
+}
+
+@keyframes sparkle-anim {
+    from {
+        background-position: 0 0, 40px 60px, 130px 270px;
+    }
+
+    to {
+        background-position: 550px 550px, 390px 410px, 380px 520px;
+    }
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
