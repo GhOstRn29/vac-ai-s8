@@ -194,6 +194,24 @@ section.visible {
     /* Ensure full image is visible */
 }
 
+/* Video Section */
+.video-frame {
+    width: 80%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 5px solid var(--accent-gold);
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.video-frame video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
 /* Utility / Music */
 /* Utility / Music */
 .music-player {
