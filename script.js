@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize first song
     loadSong(currentSongIndex);
 
+    // Attempt to play immediately (may be blocked by browser policy)
+    playMusic();
+
     function toggleMute() {
         if (bgm.muted) {
             bgm.muted = false;
