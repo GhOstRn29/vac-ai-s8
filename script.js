@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { file: 'assets/song4.mp3', name: 'How far Ill Go' }
     ];
 
-    let currentSongIndex = 0;
+    let currentSongIndex = 3;
     let isPlaying = false;
 
     function loadSong(index) {
